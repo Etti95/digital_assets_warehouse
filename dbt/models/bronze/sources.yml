@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    description: Raw bronze ingestion tables loaded directly from blockchain RPC and market APIs.
+    tables:
+      - name: bronze_blocks
+        description: Raw Ethereum block payloads with selected metadata columns.
+        columns:
+          - name: block_number
+            description: Canonical Ethereum block number.
+            tests:
+              - not_null
+              - unique
+      - name: bronze_transactions
+        description: Raw Ethereum transaction and receipt payloads.
+        columns:
+          - name: transaction_hash
+            description: Canonical Ethereum transaction hash.
+            tests:
+              - not_null
+              - unique
+      - name: bronze_token_prices
+        description: Daily token price rows normalized from a public market API.
+        columns:
+          - name: asset_id
+            tests:
+              - not_null
+          - name: price_date
+            tests:
+              - not_null
+

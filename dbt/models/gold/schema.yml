@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: gold_daily_active_wallets
+    description: Daily active wallet count across sending and receiving addresses.
+    columns:
+      - name: activity_date
+        tests:
+          - not_null
+          - unique
+      - name: daily_active_wallets
+        tests:
+          - not_null
+  - name: gold_transactions_per_day
+    description: Daily transaction volume and unique participant counts.
+    columns:
+      - name: transaction_date
+        tests:
+          - not_null
+          - unique
+  - name: gold_gas_metrics_daily
+    description: Daily gas usage and effective gas price metrics.
+    columns:
+      - name: transaction_date
+        tests:
+          - not_null
+          - unique
+  - name: gold_token_price_daily
+    description: Daily analytics-ready token price summary.
+    columns:
+      - name: asset_id
+        tests:
+          - not_null
+      - name: price_date
+        tests:
+          - not_null
+      - name: vs_currency
+        tests:
+          - not_null
+      - name: close_price
+        tests:
+          - not_null

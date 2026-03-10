@@ -1,0 +1,68 @@
+x-airflow-common: &airflow-common
+  build:
+    context: ./orchestration/airflow
+  env_file:
+    - .env
+  environment:
+    PYTHONPATH: /opt/airflow/project
+    POSTGRES_HOST: postgres
+    POSTGRES_PORT: 5432
+    AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+    AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES:-False}
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN:-postgresql+psycopg2://crypto:crypto@postgres:5432/crypto_warehouse}
+  volumes:
+    - ./orchestration/airflow/dags:/opt/airflow/dags
+    - ./:/opt/airflow/project
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: crypto-warehouse-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-crypto_warehouse}
+      POSTGRES_USER: ${POSTGRES_USER:-crypto}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-crypto}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-crypto} -d ${POSTGRES_DB:-crypto_warehouse}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  airflow-init:
+    <<: *airflow-common
+    container_name: crypto-warehouse-airflow-init
+    entrypoint: /bin/bash
+    command:
+      - -lc
+      - >
+        airflow db migrate &&
+        airflow users create
+        --username admin
+        --firstname Crypto
+        --lastname Admin
+        --role Admin
+        --email admin@example.com
+        --password admin
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: crypto-warehouse-airflow-webserver
+    command: webserver
+    ports:
+      - "8080:8080"
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: crypto-warehouse-airflow-scheduler
+    command: scheduler
+
+volumes:
+  postgres_data:

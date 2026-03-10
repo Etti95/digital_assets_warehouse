@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: silver_blocks
+    description: Normalized Ethereum block records at block grain.
+    columns:
+      - name: block_number
+        tests:
+          - not_null
+          - unique
+      - name: block_date
+        tests:
+          - not_null
+  - name: silver_transactions
+    description: Normalized Ethereum transactions enriched with receipt metrics.
+    columns:
+      - name: transaction_hash
+        tests:
+          - not_null
+          - unique
+      - name: transaction_date
+        tests:
+          - not_null
+      - name: from_address
+        tests:
+          - not_null
+  - name: silver_token_prices
+    description: Daily token prices at asset and day grain.
+    columns:
+      - name: asset_id
+        tests:
+          - not_null
+      - name: price_date
+        tests:
+          - not_null
+      - name: vs_currency
+        tests:
+          - not_null
+      - name: close_price
+        tests:
+          - not_null

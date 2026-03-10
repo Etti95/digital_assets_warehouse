@@ -1,0 +1,28 @@
+name: "crypto_data_warehouse"
+version: "1.0.0"
+config-version: 2
+
+profile: "crypto_data_warehouse"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  crypto_data_warehouse:
+    bronze:
+      +materialized: view
+      +schema: analytics
+    silver:
+      +materialized: table
+      +schema: analytics
+    gold:
+      +materialized: table
+      +schema: analytics
+
