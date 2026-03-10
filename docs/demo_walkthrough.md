@@ -42,6 +42,26 @@ Recommended captures:
 2. Graph view
 3. One successful task log
 
+Current captured artifacts:
+
+### DAG list view
+
+Shows the renamed DAG active in Airflow.
+
+![Airflow DAG list view](assets/airflow-dag-list.png)
+
+### Graph view during execution
+
+Shows the task dependency chain during a live run.
+
+![Airflow graph live run](assets/airflow-graph-live-run.png)
+
+### DAG summary
+
+Shows the Airflow summary panel for the renamed DAG.
+
+![Airflow DAG summary](assets/airflow-dag-summary.png)
+
 ## Demo Script
 
 ### Step 1: Show Running Services

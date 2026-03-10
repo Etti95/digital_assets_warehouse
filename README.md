@@ -109,6 +109,12 @@ The current local demo has already been validated with live data:
 
 See [docs/demo_walkthrough.md](docs/demo_walkthrough.md) for a reviewer-friendly walkthrough and [dashboards/demo_queries.sql](dashboards/demo_queries.sql) for demo SQL.
 
+### Airflow Overview
+
+The orchestration layer is running locally in Airflow and exposes the end-to-end DAG for ingestion, transformation, and validation.
+
+![Airflow DAG list showing the digital_assets_pipeline DAG active](docs/assets/airflow-dag-list.png)
+
 ## Example Pipeline Flow
 
 1. Fetch a configurable range of confirmed Ethereum blocks via JSON-RPC.
