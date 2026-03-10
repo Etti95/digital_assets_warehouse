@@ -17,4 +17,4 @@ airflow/plugins/
 airflow/config/
 dbt/target/
 dbt/dbt_packages/
-
+dbt/.user.yml
