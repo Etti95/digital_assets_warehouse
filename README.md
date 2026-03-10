@@ -109,14 +109,6 @@ The current local demo has already been validated with live data:
 
 See [docs/demo_walkthrough.md](docs/demo_walkthrough.md) for a reviewer-friendly walkthrough and [dashboards/demo_queries.sql](dashboards/demo_queries.sql) for demo SQL.
 
-### Airflow Overview
-
-The orchestration layer is running locally in Airflow and has been exercised against live Ethereum and market data.
-
-![Airflow DAG list with the crypto pipeline active](docs/assets/airflow-dag-list.png)
-
-![Airflow graph view showing ingestion, dbt run, and dbt test dependencies](docs/assets/airflow-graph-overview.png)
-
 ## Example Pipeline Flow
 
 1. Fetch a configurable range of confirmed Ethereum blocks via JSON-RPC.
@@ -126,7 +118,7 @@ The orchestration layer is running locally in Airflow and has been exercised aga
 5. Run dbt Silver and Gold models.
 6. Run dbt tests for core data quality checks.
 
-The Airflow DAG at [orchestration/airflow/dags/crypto_pipeline.py](orchestration/airflow/dags/crypto_pipeline.py) wires this together for local execution.
+The Airflow DAG at [orchestration/airflow/dags/digital_assets_pipeline.py](orchestration/airflow/dags/digital_assets_pipeline.py) wires this together for local execution.
 
 ## Current MVP Scope
 

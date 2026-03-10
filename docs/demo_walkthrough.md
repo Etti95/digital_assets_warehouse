@@ -34,27 +34,13 @@ Use this order:
 
 ## Airflow Screenshots
 
-Use these images when presenting the orchestration layer:
+Retake the Airflow screenshots after the DAG rename so the UI reflects `digital_assets_pipeline`.
 
-### DAG list view
+Recommended captures:
 
-Shows that the `crypto_pipeline` DAG exists, is active, and has recent successful activity.
-
-![Airflow DAG list view](assets/airflow-dag-list.png)
-
-### Graph view
-
-Shows the dependency chain from ingestion through dbt run and dbt test.
-
-![Airflow graph view](assets/airflow-graph-overview.png)
-
-### Task-focused views
-
-These are optional support screenshots if you want to talk through task-level execution.
-
-![Airflow task-focused transaction view](assets/airflow-task-transactions.png)
-
-![Airflow task-focused blocks view](assets/airflow-task-blocks.png)
+1. DAG list view
+2. Graph view
+3. One successful task log
 
 ## Demo Script
 
@@ -149,6 +135,6 @@ For a portfolio review, that is usually more valuable than a huge but fragile ba
 The next upgrades with the highest portfolio value are:
 
 1. Run a larger Ethereum backfill such as `10` or `25` blocks.
-2. Trigger the `crypto_pipeline` DAG manually and capture Airflow screenshots.
+2. Trigger the `digital_assets_pipeline` DAG manually and capture Airflow screenshots.
 3. Add one simple dashboard or notebook over the Gold tables.
 4. Add one more domain such as ERC-20 transfers.

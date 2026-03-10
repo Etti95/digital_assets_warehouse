@@ -14,8 +14,8 @@ default_args = {
 }
 
 with DAG(
-    dag_id="crypto_pipeline",
-    description="Local MVP crypto data warehouse pipeline",
+    dag_id="digital_assets_pipeline",
+    description="Local MVP digital assets warehouse pipeline",
     default_args=default_args,
     start_date=datetime(2025, 1, 1),
     schedule="@daily",
@@ -54,4 +54,3 @@ with DAG(
 
     ingest_blocks >> ingest_transactions
     [ingest_transactions, ingest_prices] >> dbt_run >> dbt_test
-

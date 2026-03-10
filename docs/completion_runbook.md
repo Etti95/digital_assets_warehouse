@@ -86,7 +86,7 @@ This is the fastest way to confirm the pipeline works before relying on Airflow 
 
 ## 7. Validate the Airflow DAG
 
-1. Open Airflow and locate the `crypto_pipeline` DAG.
+1. Open Airflow and locate the `digital_assets_pipeline` DAG.
 2. Unpause the DAG.
 3. Trigger a manual run.
 4. Watch task execution in this order:
@@ -151,7 +151,7 @@ You can consider the project complete for a strong portfolio MVP when all of the
 
 If you want the shortest path forward, do this next:
 
-1. Trigger the `crypto_pipeline` DAG in Airflow.
+1. Trigger the `digital_assets_pipeline` DAG in Airflow.
 2. Confirm a successful full DAG run.
 3. Add one integration test for ingestion-to-Postgres behavior.
 4. Add one lightweight dashboard artifact for the Gold tables.
