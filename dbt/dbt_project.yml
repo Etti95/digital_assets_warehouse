@@ -1,8 +1,8 @@
-name: "crypto_data_warehouse"
+name: "digital_assets_warehouse"
 version: "1.0.0"
 config-version: 2
 
-profile: "crypto_data_warehouse"
+profile: "digital_assets_warehouse"
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -15,7 +15,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  crypto_data_warehouse:
+  digital_assets_warehouse:
     bronze:
       +materialized: view
       +schema: analytics
@@ -25,4 +25,3 @@ models:
     gold:
       +materialized: table
       +schema: analytics
-

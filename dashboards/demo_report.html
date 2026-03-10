@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>digital-assets-warehouse Demo Report</title>
+    <style>
+      :root {
+        --bg: #f3f0e8;
+        --surface: rgba(255, 255, 255, 0.78);
+        --ink: #13202c;
+        --muted: #5d6874;
+        --line: #d8d7cd;
+        --accent: #0f766e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%),
+          linear-gradient(180deg, #f8f6f0 0%, var(--bg) 100%);
+        color: var(--ink);
+      }
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 56px 24px 72px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 48px;
+        line-height: 1.05;
+      }
+      .lede {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.6;
+        margin-top: 18px;
+      }
+      .stamp {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 14px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 36px;
+      }
+      .card, .panel {
+        backdrop-filter: blur(8px);
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 30px rgba(19, 32, 44, 0.07);
+      }
+      .card {
+        padding: 22px 22px 26px;
+      }
+      .eyebrow {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .value {
+        margin: 18px 0 0;
+        font-size: 54px;
+        font-weight: 700;
+      }
+      .panel {
+        margin-top: 26px;
+        padding: 24px;
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: 24px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th, td {
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+      }
+      th {
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .note {
+        margin-top: 18px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .pill {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(15, 118, 110, 0.12);
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 18px;
+      }
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 620px) {
+        h1 {
+          font-size: 38px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        table {
+          font-size: 13px;
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="pill">Local portfolio demo</p>
+      <h1>digital-assets-warehouse</h1>
+      <p class="lede">
+        Lightweight analytics report generated from the Gold layer of the local warehouse.
+        This artifact is meant for hiring managers, founders, and technical reviewers who
+        want to see concrete outputs without navigating the full stack first.
+      </p>
+      <p class="stamp">Generated from live Postgres data at 2026-03-10 20:28:14 UTC</p>
+      <section class="grid">
+        
+        <article class="card">
+          <p class="eyebrow">Daily Active Wallets</p>
+          <p class="value">1</p>
+        </article>
+        
+
+        <article class="card">
+          <p class="eyebrow">Transactions Per Day</p>
+          <p class="value">1</p>
+        </article>
+        
+
+        <article class="card">
+          <p class="eyebrow">Gas Metrics Daily</p>
+          <p class="value">1</p>
+        </article>
+        
+
+        <article class="card">
+          <p class="eyebrow">Token Price Daily</p>
+          <p class="value">62</p>
+        </article>
+        
+      </section>
+      <section class="panel">
+        <h2>Token Price Sample</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Date</th>
+              <th>Close Price</th>
+              <th>Market Cap</th>
+              <th>Total Volume</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>bitcoin</td>
+          <td>2026-03-10</td>
+          <td>69968.64293539</td>
+          <td>1400995283241.75</td>
+          <td>58135886534.80</td>
+        </tr>
+        
+
+        <tr>
+          <td>ethereum</td>
+          <td>2026-03-10</td>
+          <td>2038.72386260</td>
+          <td>246267735988.14</td>
+          <td>25027860656.72</td>
+        </tr>
+        
+
+        <tr>
+          <td>bitcoin</td>
+          <td>2026-03-09</td>
+          <td>66036.15782363</td>
+          <td>1321622467264.54</td>
+          <td>35845854760.95</td>
+        </tr>
+        
+
+        <tr>
+          <td>ethereum</td>
+          <td>2026-03-09</td>
+          <td>1938.62492535</td>
+          <td>234130530358.19</td>
+          <td>16256963053.69</td>
+        </tr>
+        
+
+        <tr>
+          <td>bitcoin</td>
+          <td>2026-03-08</td>
+          <td>67271.19077772</td>
+          <td>1345067153653.06</td>
+          <td>24588849466.22</td>
+        </tr>
+        
+
+        <tr>
+          <td>ethereum</td>
+          <td>2026-03-08</td>
+          <td>1969.69379820</td>
+          <td>237705413185.16</td>
+          <td>9708504242.95</td>
+        </tr>
+        
+
+        <tr>
+          <td>bitcoin</td>
+          <td>2026-03-07</td>
+          <td>68148.28339967</td>
+          <td>1364073902597.76</td>
+          <td>46427994894.48</td>
+        </tr>
+        
+
+        <tr>
+          <td>ethereum</td>
+          <td>2026-03-07</td>
+          <td>1980.77828413</td>
+          <td>239165082328.51</td>
+          <td>19315502583.72</td>
+        </tr>
+        
+
+        <tr>
+          <td>bitcoin</td>
+          <td>2026-03-06</td>
+          <td>70874.98687140</td>
+          <td>1417652016603.27</td>
+          <td>55313274475.73</td>
+        </tr>
+        
+
+        <tr>
+          <td>ethereum</td>
+          <td>2026-03-06</td>
+          <td>2074.52224819</td>
+          <td>250411621366.99</td>
+          <td>22447894281.23</td>
+        </tr>
+        
+          </tbody>
+        </table>
+        <p class="note">
+          These rows come from <code>analytics_analytics.gold_token_price_daily</code>.
+          The current dataset is intentionally small, but the same delivery pattern works for broader
+          backfills and richer Gold marts.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

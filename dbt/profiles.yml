@@ -1,4 +1,4 @@
-crypto_data_warehouse:
+digital_assets_warehouse:
   target: dev
   outputs:
     dev:

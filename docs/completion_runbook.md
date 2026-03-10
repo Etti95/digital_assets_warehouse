@@ -1,13 +1,13 @@
 # Completion Runbook
 
-This document gives a step-by-step path for taking `crypto-data-warehouse` from its current MVP state to a more complete, polished portfolio project.
+This document gives a step-by-step path for taking `digital-assets-warehouse` from its current MVP state to a more complete, polished portfolio project.
 
 ## 1. Prepare the Local Environment
 
 1. Confirm Docker Desktop is running.
 2. Confirm `uv` is installed by running `uv --version`.
 3. Confirm Python 3.11+ is available.
-4. Review [.env.example](/Users/richmore/Desktop/projects/crypto-data-warehouse/.env.example).
+4. Review [.env.example](../.env.example).
 5. Copy `.env.example` to `.env` if you want to reset your local config.
 6. Keep `POSTGRES_PORT=5433` unless you intentionally want a different host port.
 7. Set `ETHEREUM_RPC_URL` to your preferred RPC endpoint if you do not want to use the default public node.
@@ -120,8 +120,8 @@ These are the highest-value next implementation steps.
    - Add additional Gold marts for chain activity and wallet behavior.
 5. Improve portfolio presentation.
    - Add sample screenshots of Airflow and warehouse outputs to the README.
-   - Add an example dashboard or BI layer in [dashboards/README.md](/Users/richmore/Desktop/projects/crypto-data-warehouse/dashboards/README.md).
-   - Add a short demo walkthrough section in [README.md](/Users/richmore/Desktop/projects/crypto-data-warehouse/README.md).
+   - Add an example dashboard or BI layer in [dashboards/README.md](../dashboards/README.md).
+   - Add a short demo walkthrough section in [README.md](../README.md).
 
 ## 9. Recommended Order to Finish the Project
 

@@ -129,7 +129,7 @@ docker exec crypto-warehouse-postgres psql -U crypto -d crypto_warehouse -c "sel
 
 Use this summary if you need to explain the project quickly:
 
-`crypto-data-warehouse` is a local-first crypto analytics platform that ingests Ethereum blocks, Ethereum transactions, and market prices into Postgres, transforms them with dbt into Bronze, Silver, and Gold layers, and orchestrates the full flow with Airflow. The MVP is intentionally narrow, but the repo structure, idempotent load pattern, testing, documentation, and developer experience are set up to scale into a multi-chain warehouse project.
+`digital-assets-warehouse` is a local-first crypto analytics platform that ingests Ethereum blocks, Ethereum transactions, and market prices into Postgres, transforms them with dbt into Bronze, Silver, and Gold layers, and orchestrates the full flow with Airflow. The MVP is intentionally narrow, but the repo structure, idempotent load pattern, testing, documentation, and developer experience are set up to scale into a multi-chain warehouse project.
 
 ## Why The Current Demo Is Good Enough
 

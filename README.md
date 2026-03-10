@@ -1,4 +1,4 @@
-# crypto-data-warehouse
+# digital-assets-warehouse
 
 A production-style portfolio project for crypto and on-chain analytics engineering. The repository demonstrates how to ingest blockchain and market data, model it in a warehouse, orchestrate it locally, and expose analytics-ready tables using a clear Bronze to Silver to Gold pattern.
 
@@ -31,7 +31,7 @@ See [docs/architecture.md](docs/architecture.md) for the full design.
 ## Repository Structure
 
 ```text
-crypto-data-warehouse/
+digital-assets-warehouse/
 ├── dashboards/
 ├── dbt/
 ├── docs/
@@ -155,25 +155,18 @@ Representative outputs from the current live demo dataset:
 
 ### Gold Metric Snapshot
 
-```text
-gold_daily_active_wallets = 1
-gold_transactions_per_day = 1
-gold_gas_metrics_daily = 1
-gold_token_price_daily = 62
-```
+![Gold metric snapshot](docs/assets/gold-metric-snapshot.svg)
 
 ### Token Price Sample
 
-```text
- asset_id | price_date |  close_price   |    market_cap    |  total_volume
-----------+------------+----------------+------------------+----------------
- bitcoin  | 2026-03-10 | 69968.64293539 | 1400995283241.75 | 58135886534.80
- ethereum | 2026-03-10 |  2038.72386260 |  246267735988.14 | 25027860656.72
- bitcoin  | 2026-03-09 | 66036.15782363 | 1321622467264.54 | 35845854760.95
- ethereum | 2026-03-09 |  1938.62492535 |  234130530358.19 | 16256963053.69
- bitcoin  | 2026-03-08 | 67271.19077772 | 1345067153653.06 | 24588849466.22
- ethereum | 2026-03-08 |  1969.69379820 |  237705413185.16 |  9708504242.95
-```
+![Gold token price sample](docs/assets/gold-token-price-sample.svg)
+
+### Demo Artifact
+
+The repo includes a lightweight HTML analytics report that can be regenerated from the live warehouse:
+
+- generator: [dashboards/generate_report.py](dashboards/generate_report.py)
+- output: [dashboards/demo_report.html](dashboards/demo_report.html)
 
 ## What This Demonstrates
 

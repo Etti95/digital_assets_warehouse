@@ -1,4 +1,4 @@
-crypto_data_warehouse:
+digital_assets_warehouse:
   target: dev
   outputs:
     dev:
@@ -10,4 +10,3 @@ crypto_data_warehouse:
       dbname: "{{ env_var('POSTGRES_DB', 'crypto_warehouse') }}"
       schema: analytics
       threads: 4
-

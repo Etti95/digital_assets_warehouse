@@ -2,7 +2,7 @@
 
 ## Overview
 
-`crypto-data-warehouse` is a local-first analytics stack for crypto and on-chain data. The MVP ingests Ethereum blocks, Ethereum transactions, and daily token prices into Postgres, transforms them with dbt, and orchestrates the flow with Airflow.
+`digital-assets-warehouse` is a local-first analytics stack for crypto and on-chain data. The MVP ingests Ethereum blocks, Ethereum transactions, and daily token prices into Postgres, transforms them with dbt, and orchestrates the flow with Airflow.
 
 ## System Design
 
@@ -41,4 +41,3 @@ The project is organized so it can later support:
 - event streaming or Kafka-based ingestion
 - wallet labeling and entity enrichment
 - serving layers for APIs or dashboard applications
-

@@ -1,5 +1,5 @@
 [project]
-name = "crypto-data-warehouse"
+name = "digital-assets-warehouse"
 version = "0.1.0"
 description = "Production-style crypto data warehouse portfolio project for on-chain analytics."
 readme = "README.md"

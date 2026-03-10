@@ -2,7 +2,7 @@ PYTHON ?= .venv/bin/python
 UV ?= uv
 DBT_PROFILES_DIR ?= $(PWD)/dbt
 
-.PHONY: install up down test lint format ingest-blocks ingest-transactions ingest-prices dbt-run dbt-test airflow-init
+.PHONY: install up down test lint format ingest-blocks ingest-transactions ingest-prices dbt-run dbt-test airflow-init demo-report
 
 install:
 	$(UV) sync --dev
@@ -40,3 +40,5 @@ dbt-test:
 airflow-init:
 	docker compose run --rm airflow-init
 
+demo-report:
+	$(UV) run python -m dashboards.generate_report

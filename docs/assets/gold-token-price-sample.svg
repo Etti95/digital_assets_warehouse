@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Gold token price sample</title>
+  <desc id="desc">Sample rows from the gold token price daily table.</desc>
+  <rect width="1200" height="500" fill="#f5f4ef"/>
+  <rect x="40" y="40" width="1120" height="420" rx="18" fill="#ffffff" stroke="#d6d6cf"/>
+  <text x="70" y="88" fill="#18202a" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Gold Token Price Sample</text>
+  <text x="70" y="118" fill="#66717d" font-family="Helvetica, Arial, sans-serif" font-size="16">Latest rows from `analytics_analytics.gold_token_price_daily`.</text>
+
+  <g fill="#3f4c58" font-family="Menlo, Monaco, monospace" font-size="16">
+    <text x="70" y="170">asset_id</text>
+    <text x="220" y="170">price_date</text>
+    <text x="380" y="170">close_price</text>
+    <text x="610" y="170">market_cap</text>
+    <text x="880" y="170">total_volume</text>
+
+    <text x="70" y="215">bitcoin</text>
+    <text x="220" y="215">2026-03-10</text>
+    <text x="380" y="215">69968.64293539</text>
+    <text x="610" y="215">1400995283241.75</text>
+    <text x="880" y="215">58135886534.80</text>
+
+    <text x="70" y="255">ethereum</text>
+    <text x="220" y="255">2026-03-10</text>
+    <text x="380" y="255">2038.72386260</text>
+    <text x="610" y="255">246267735988.14</text>
+    <text x="880" y="255">25027860656.72</text>
+
+    <text x="70" y="295">bitcoin</text>
+    <text x="220" y="295">2026-03-09</text>
+    <text x="380" y="295">66036.15782363</text>
+    <text x="610" y="295">1321622467264.54</text>
+    <text x="880" y="295">35845854760.95</text>
+
+    <text x="70" y="335">ethereum</text>
+    <text x="220" y="335">2026-03-09</text>
+    <text x="380" y="335">1938.62492535</text>
+    <text x="610" y="335">234130530358.19</text>
+    <text x="880" y="335">16256963053.69</text>
+
+    <text x="70" y="375">bitcoin</text>
+    <text x="220" y="375">2026-03-08</text>
+    <text x="380" y="375">67271.19077772</text>
+    <text x="610" y="375">1345067153653.06</text>
+    <text x="880" y="375">24588849466.22</text>
+  </g>
+</svg>
+
